@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { UserRound } from "lucide-react";
+import { ShoppingBasket, UserRound } from "lucide-react";
 import { signOut } from "@/auth";
 import Link from "next/link";
 import { currentUser } from "@/lib/auth";
@@ -87,9 +87,11 @@ async function AuthNav() {
 
 export default function Navbar() {
   return (
-    <nav className="flex gap-x-4 items-center justify-between bg-gray-50 shadow-sm pl-4">
+    <nav className="flex gap-x-4 items-center justify-between bg-primary-foreground shadow-sm pl-4">
       <Link href="/">
-        <h1 className="text-2xl font-semibold">Next Dashboard</h1>
+      <div className="flex flex-row text-2xl font-semibold items-center gap-2">
+        <ShoppingBasket /> <h1>Boodschappie</h1>
+      </div>
       </Link>
       <AuthNav />
     </nav>
