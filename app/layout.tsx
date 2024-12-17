@@ -18,6 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html lang="nl" className="dark">
       <body className={inter.className}>
         <Toaster position="bottom-left" richColors theme="dark" />
+        
         {children}
       </body>
     </html>
